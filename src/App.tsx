@@ -35,16 +35,16 @@ import {
   X
 } from 'lucide-react';
 const logoHino = `${import.meta.env.BASE_URL}images/logo.webp`;
-const heroImage = `${import.meta.env.BASE_URL}images/hero-image.webp`;
-const hino300 = `${import.meta.env.BASE_URL}images/hino-300-series.webp`;
-const hino500 = `${import.meta.env.BASE_URL}images/hino-500-series.webp`;
-const hino700 = `${import.meta.env.BASE_URL}images/hino-700-series.webp`;
-const karoseriHino = `${import.meta.env.BASE_URL}images/karoseri-hino.webp`;
-const serahTerima1 = `${import.meta.env.BASE_URL}images/serah-terima-1.webp`;
-const serahTerima2 = `${import.meta.env.BASE_URL}images/serah-terima-2.webp`;
-const galeri1 = `${import.meta.env.BASE_URL}images/galeri-truk-1.webp`;
-const galeri2 = `${import.meta.env.BASE_URL}images/galeri-truk-2.webp`;
-const galeri3 = `${import.meta.env.BASE_URL}images/galeri-truk-3.webp`;
+const heroImage = "https://picsum.photos/seed/hino-hero/1920/1080";
+const hino300 = "https://picsum.photos/seed/hino300/800/600";
+const hino500 = "https://picsum.photos/seed/hino500/800/600";
+const hino700 = "https://picsum.photos/seed/hino700/800/600";
+const karoseriHino = "https://picsum.photos/seed/karoseri/800/600";
+const serahTerima1 = "https://picsum.photos/seed/delivery1/800/800";
+const serahTerima2 = "https://picsum.photos/seed/delivery2/800/800";
+const galeri1 = "https://picsum.photos/seed/hino-truck-1/800/800";
+const galeri2 = "https://picsum.photos/seed/hino-truck-2/800/800";
+const galeri3 = "https://picsum.photos/seed/hino-truck-3/800/800";
 
 declare global {
   interface Window {
