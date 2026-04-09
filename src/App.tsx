@@ -314,9 +314,9 @@ export default function App() {
                   <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Sales Resmi Hino Indonesia</span>
                 </div>
                 <h2 className="text-5xl lg:text-7xl font-bold text-slate-900 leading-[1.05] tracking-tight mb-8">
-                  Dealer Hino <br /> 
+                  Partner Tangguh <br /> 
                   <span className="text-red-600 relative inline-block">
-                    Resmi Jawa Timur.
+                    Bisnis Anda.
                     <motion.span 
                       initial={{ width: 0 }}
                       animate={{ width: "100%" }}
@@ -379,10 +379,10 @@ export default function App() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="text-4xl font-black text-white leading-[1.1] tracking-tighter mb-6 uppercase"
+                className="text-4xl font-black text-white leading-[1.05] tracking-tighter mb-6 uppercase drop-shadow-2xl"
               >
-                Dealer Hino <br /> 
-                <span className="text-red-600">Resmi Jatim.</span>
+                Partner Tangguh <br /> 
+                <span className="text-red-600 drop-shadow-none">Bisnis Anda.</span>
               </motion.h2>
               <motion.p 
                 initial={{ opacity: 0, y: 20 }}
