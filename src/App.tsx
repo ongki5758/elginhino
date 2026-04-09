@@ -29,8 +29,8 @@ import {
   MessageCircle,
   MapPin,
   Instagram,
-  Facebook,
-  Linkedin,
+  Youtube,
+  Music2,
   Check,
   X
 } from 'lucide-react';
@@ -1029,10 +1029,44 @@ export default function App() {
             <div className="pt-12 border-t border-slate-50 flex flex-col md:flex-row justify-between items-center gap-6">
               <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">© 2026 Hino Official Dealer Jawa Timur. All Rights Reserved.</p>
               <div className="flex gap-6">
-                <Instagram className="w-4 h-4 text-slate-400 hover:text-red-600 transition-colors cursor-pointer" />
-                <Facebook className="w-4 h-4 text-slate-400 hover:text-red-600 transition-colors cursor-pointer" />
-                <Linkedin className="w-4 h-4 text-slate-400 hover:text-red-600 transition-colors cursor-pointer" />
+                <a href="https://www.instagram.com/elginmarchlouis" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-red-600 transition-colors" aria-label="Instagram">
+                  <Instagram className="w-4 h-4" />
+                </a>
+                <a href="https://www.tiktok.com/@elginhino" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-red-600 transition-colors" aria-label="TikTok">
+                  <Music2 className="w-4 h-4" />
+                </a>
+                <a href="https://www.youtube.com/c/ElginMd" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-red-600 transition-colors" aria-label="YouTube">
+                  <Youtube className="w-4 h-4" />
+                </a>
               </div>
+            </div>
+
+            {/* WATERMARK */}
+            <div className="mt-16 pt-8 border-t border-slate-50 flex flex-col items-center">
+              <motion.a 
+                href="https://ongki.pro" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="group flex flex-col items-center gap-3 grayscale hover:grayscale-0 transition-all duration-700"
+              >
+                <span className="text-[8px] font-bold text-slate-300 uppercase tracking-[0.4em] group-hover:text-slate-400 transition-colors">Crafted with Precision by</span>
+                <div className="flex items-center gap-3">
+                  <div className="relative">
+                    <div className="w-8 h-8 bg-slate-900 rounded-xl flex items-center justify-center group-hover:bg-red-600 transition-all duration-500 group-hover:rotate-[360deg] shadow-lg">
+                      <div className="w-2.5 h-2.5 bg-white rounded-full animate-pulse"></div>
+                    </div>
+                    <div className="absolute -inset-1 border border-slate-100 rounded-xl group-hover:border-red-100 transition-colors duration-500"></div>
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-sm font-black text-slate-900 uppercase tracking-tighter leading-none group-hover:text-red-600 transition-colors duration-500">ongki.pro</span>
+                    <span className="text-[7px] font-bold text-slate-400 uppercase tracking-[0.2em] mt-1">Digital Marketing Architect</span>
+                  </div>
+                </div>
+              </motion.a>
             </div>
           </div>
         </footer>
