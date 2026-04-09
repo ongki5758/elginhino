@@ -1,0 +1,29 @@
+/* Custom styles for the Hino App */
+
+@keyframes bounce-subtle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-bounce-subtle {
+  animation: bounce-subtle 2s infinite ease-in-out;
+}
+
+/* Hide scrollbar for clean horizontal scrolling if needed */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Custom transitions and behaviors */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom shadows for better depth */
+.shadow-premium {
+  box-shadow: 0 20px 50px -12px rgba(0, 0, 0, 0.1);
+}
