@@ -9,7 +9,7 @@
  */
 
 import React, { useEffect } from 'react';
-import { motion } from 'motion/react';
+import { motion, AnimatePresence } from 'motion/react';
 import { 
   MessageSquare, 
   Phone, 
@@ -31,7 +31,8 @@ import {
   Instagram,
   Facebook,
   Linkedin,
-  Check
+  Check,
+  X
 } from 'lucide-react';
 import logoHino from './assets/logo.webp';
 import heroImage from './assets/hero-image.webp';
@@ -88,7 +89,100 @@ const FAQItem: React.FC<{ faq: { q: string, a: string }, index: number }> = ({ f
   );
 };
 
+const LegalModal: React.FC<{ isOpen: boolean, onClose: () => void, type: 'privacy' | 'terms' }> = ({ isOpen, onClose, type }) => {
+  if (!isOpen) return null;
+
+  const content = {
+    privacy: {
+      title: "Kebijakan Privasi",
+      sections: [
+        {
+          h: "Pengumpulan Informasi",
+          p: "Kami mengumpulkan informasi yang Anda berikan secara sukarela saat menghubungi kami melalui WhatsApp atau formulir kontak, termasuk nama dan nomor telepon untuk keperluan konsultasi unit Hino."
+        },
+        {
+          h: "Penggunaan Data",
+          p: "Data Anda digunakan semata-mata untuk memberikan informasi produk, simulasi kredit, dan layanan purna jual. Kami tidak akan menjual atau membagikan data Anda kepada pihak ketiga tanpa izin."
+        },
+        {
+          h: "Keamanan",
+          p: "Kami berkomitmen untuk memastikan informasi Anda aman. Kami telah menerapkan prosedur fisik dan elektronik yang sesuai untuk mengamankan informasi yang kami kumpulkan secara online."
+        }
+      ]
+    },
+    terms: {
+      title: "Syarat & Ketentuan",
+      sections: [
+        {
+          h: "Status Dealer",
+          p: "Layanan ini dikelola oleh Elgin MD sebagai Senior Sales Consultant resmi Dealer Hino Jawa Timur. Semua transaksi dilakukan melalui mekanisme resmi dealer."
+        },
+        {
+          h: "Harga & Promo",
+          p: "Harga yang tercantum atau diinformasikan adalah estimasi On The Road (OTR) dan dapat berubah sewaktu-waktu mengikuti kebijakan harga pusat dan regulasi pajak pemerintah."
+        },
+        {
+          h: "Ketersediaan Unit",
+          p: "Ketersediaan unit (Ready Stock) bersifat dinamis. Pemesanan dianggap sah setelah adanya tanda jadi (Booking Fee) yang masuk ke rekening resmi perusahaan."
+        }
+      ]
+    }
+  };
+
+  const activeContent = content[type];
+
+  return (
+    <motion.div 
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 bg-slate-900/90 backdrop-blur-sm"
+    >
+      <motion.div 
+        initial={{ scale: 0.9, opacity: 0, y: 20 }}
+        animate={{ scale: 1, opacity: 1, y: 0 }}
+        className="bg-white w-full max-w-2xl rounded-[2rem] overflow-hidden shadow-2xl flex flex-col max-h-[90vh]"
+      >
+        <div className="p-6 sm:p-8 border-b border-slate-100 flex items-center justify-between bg-white sticky top-0 z-10">
+          <h2 className="text-xl sm:text-2xl font-black text-slate-900 uppercase tracking-tighter">{activeContent.title}</h2>
+          <button 
+            onClick={onClose}
+            className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 hover:bg-red-600 hover:text-white transition-all duration-300"
+          >
+            <X className="w-5 h-5" />
+          </button>
+        </div>
+        <div className="p-6 sm:p-10 overflow-y-auto custom-scrollbar">
+          <div className="space-y-10">
+            {activeContent.sections.map((section, i) => (
+              <div key={i}>
+                <h3 className="text-xs font-black text-red-600 uppercase tracking-widest mb-4">{section.h}</h3>
+                <p className="text-slate-500 text-sm sm:text-base leading-relaxed font-medium">{section.p}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-12 p-6 bg-slate-50 rounded-2xl border border-slate-100">
+            <p className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em] leading-relaxed">
+              Terakhir diperbarui: 09 April 2026. <br />
+              Hino Official Jawa Timur - Elgin MD.
+            </p>
+          </div>
+        </div>
+        <div className="p-6 bg-white border-t border-slate-100">
+          <button 
+            onClick={onClose}
+            className="w-full py-4 bg-slate-900 text-white font-bold rounded-xl text-xs uppercase tracking-widest hover:bg-slate-800 transition-all"
+          >
+            Tutup Halaman
+          </button>
+        </div>
+      </motion.div>
+    </motion.div>
+  );
+};
+
 export default function App() {
+  const [legalModal, setLegalModal] = React.useState<{ isOpen: boolean, type: 'privacy' | 'terms' }>({ isOpen: false, type: 'privacy' });
   const trackWhatsApp = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (typeof window.gtag_report_conversion === 'function') {
       e.preventDefault();
@@ -137,7 +231,7 @@ export default function App() {
                 className="flex items-center gap-3"
               >
                 <div className="h-10 w-10 overflow-hidden rounded-lg bg-red-600 p-1.5 shadow-lg shadow-red-200/50">
-                  <img src={logoHino} alt="Hino Logo" className="w-full h-full object-contain" />
+                  <img src={logoHino} alt="Hino Logo" className="w-full h-full object-contain" referrerPolicy="no-referrer" />
                 </div>
                 <div className="flex flex-col">
                   <motion.div 
@@ -250,7 +344,7 @@ export default function App() {
                 className="relative"
               >
                 <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-premium border border-slate-100">
-                  <img src={heroImage} alt="Hino Truck Official" className="w-full h-full object-cover" />
+                  <img src={heroImage} alt="Hino Truck Official" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>
                 <motion.div 
                   initial={{ opacity: 0, y: 20 }}
@@ -268,7 +362,7 @@ export default function App() {
 
           {/* Mobile Hero (Locked 9:16) */}
           <div className="md:hidden relative aspect-[9/16] w-full overflow-hidden">
-            <img src={heroImage} alt="Hino Truck Mobile" className="absolute inset-0 w-full h-full object-cover" />
+            <img src={heroImage} alt="Hino Truck Mobile" className="absolute inset-0 w-full h-full object-cover" referrerPolicy="no-referrer" />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
             <div className="absolute bottom-0 left-0 right-0 p-8 pb-20">
               <motion.div 
@@ -419,7 +513,7 @@ export default function App() {
                   className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-premium transition-all duration-500"
                 >
                   <div className="aspect-video overflow-hidden bg-slate-50">
-                    <img src={unit.img} alt={unit.name} className="w-full h-full object-cover group-hover:scale-105 transition duration-700" />
+                    <img src={unit.img} alt={unit.name} className="w-full h-full object-cover group-hover:scale-105 transition duration-700" referrerPolicy="no-referrer" />
                   </div>
                   <div className="p-6 sm:p-8">
                     <p className="text-[9px] sm:text-[10px] font-bold text-red-600 uppercase tracking-widest mb-2">{unit.sub}</p>
@@ -479,7 +573,7 @@ export default function App() {
               </div>
               <div className="lg:w-1/2 mt-16 lg:mt-0">
                 <div className="relative rounded-3xl overflow-hidden shadow-premium aspect-square">
-                  <img src="https://cdn.scalev.id/uploads/1771003873/QM85L4N5L3Ocr0JEscFIuQ/1771003873992-images-(1).webp" alt="Hino Business Solution" className="w-full h-full object-cover" />
+                  <img src="https://cdn.scalev.id/uploads/1771003873/QM85L4N5L3Ocr0JEscFIuQ/1771003873992-images-(1).webp" alt="Hino Business Solution" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                   <div className="absolute inset-0 bg-slate-900/5"></div>
                 </div>
               </div>
@@ -673,7 +767,7 @@ export default function App() {
                 { src: galeri3, label: "Proses Pengiriman" }
               ].map((img, i) => (
                 <div key={i} className="group relative aspect-square rounded-3xl overflow-hidden shadow-apple border border-slate-50">
-                  <img src={img.src} alt={img.label} className="w-full h-full object-cover group-hover:scale-105 transition duration-700" />
+                  <img src={img.src} alt={img.label} className="w-full h-full object-cover group-hover:scale-105 transition duration-700" referrerPolicy="no-referrer" />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   <p className="absolute bottom-6 left-6 text-white text-[9px] font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-500">{img.label}</p>
                 </div>
@@ -868,7 +962,7 @@ export default function App() {
                   </div>
                   <div className="relative z-10">
                     <div className="flex items-center gap-6 mb-12">
-                      <img src={heroImage} alt="Elgin MD" className="w-20 h-20 rounded-2xl object-cover border-2 border-white/10" />
+                      <img src={heroImage} alt="Elgin MD" className="w-20 h-20 rounded-2xl object-cover border-2 border-white/10" referrerPolicy="no-referrer" />
                       <div>
                         <p className="text-xl font-bold tracking-tight">Elgin MD</p>
                         <p className="text-xs text-red-500 font-bold uppercase tracking-widest mt-1">Senior Sales Consultant</p>
@@ -892,7 +986,7 @@ export default function App() {
               <div className="lg:col-span-2">
                 <div className="flex items-center gap-3 mb-8">
                   <div className="h-10 w-10 overflow-hidden rounded-lg bg-red-600 p-1.5 text-white">
-                    <img src={logoHino} alt="Hino Logo" className="w-full h-full object-contain" />
+                    <img src={logoHino} alt="Hino Logo" className="w-full h-full object-contain" referrerPolicy="no-referrer" />
                   </div>
                   <span className="text-xl font-bold tracking-tight text-slate-900 uppercase">Hino <span className="text-red-600">Official</span></span>
                 </div>
@@ -912,11 +1006,10 @@ export default function App() {
                 </ul>
               </div>
               <div>
-                <h5 className="text-[10px] font-bold text-slate-900 uppercase tracking-widest mb-8">Legal</h5>
+                <h4 className="text-[10px] font-bold text-slate-900 uppercase tracking-widest mb-8">Legal</h4>
                 <ul className="space-y-4 text-xs font-bold text-slate-400 uppercase tracking-widest">
-                  <li><span className="hover:text-red-600 transition-colors cursor-pointer">Syarat & Ketentuan</span></li>
-                  <li><span className="hover:text-red-600 transition-colors cursor-pointer">Kebijakan Privasi</span></li>
-                  <li><span className="hover:text-red-600 transition-colors cursor-pointer">Hino Indonesia</span></li>
+                  <li><button onClick={() => setLegalModal({ isOpen: true, type: 'terms' })} className="hover:text-red-600 transition-colors cursor-pointer">Syarat & Ketentuan</button></li>
+                  <li><button onClick={() => setLegalModal({ isOpen: true, type: 'privacy' })} className="hover:text-red-600 transition-colors cursor-pointer">Kebijakan Privasi</button></li>
                 </ul>
               </div>
             </div>
@@ -957,6 +1050,15 @@ export default function App() {
           </a>
         </div>
 
+        <AnimatePresence>
+          {legalModal.isOpen && (
+            <LegalModal 
+              isOpen={legalModal.isOpen} 
+              type={legalModal.type} 
+              onClose={() => setLegalModal({ ...legalModal, isOpen: false })} 
+            />
+          )}
+        </AnimatePresence>
       </div>
     </div>
   );
