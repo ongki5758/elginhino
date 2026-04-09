@@ -45,7 +45,7 @@ const serahTerima2 = "https://cdn.scalev.id/uploads/1771044381/evtnqFMKJAo4loJ0J
 const galeri1 = "https://cdn.scalev.id/uploads/1771003984/yBvGluPFdnY2ZEpdR4h8Kg/1771003985431-FM-280-JD-3.webp";
 const galeri2 = "https://cdn.scalev.id/uploads/1771004240/yBUgrI_clgGU56sFICajTQ/1771004241504-Dealer20230315-122717-Dealer-Resmi-Hino-Ranger-FM-280-JD-Ready-Stock.webp";
 const galeri3 = "https://cdn.scalev.id/uploads/1771085995/x9Kor0E_sYJcH__KZbGaPw/1771085996414-WhatsApp-Image-2026-02-14-at-17.35.39-(1).webp";
-const galeri4 = "http://cdn.scalev.id/uploads/1771086021/9GUoFPJfNZzKyg3xe75h0g/1771086023220-WhatsApp-Image-2026-02-14-at-17.35.40.webp";
+const galeri4 = "https://cdn.scalev.id/uploads/1771086021/9GUoFPJfNZzKyg3xe75h0g/1771086023220-WhatsApp-Image-2026-02-14-at-17.35.40.webp";
 
 declare global {
   interface Window {
@@ -999,7 +999,7 @@ export default function App() {
               <div className="lg:col-span-2">
                 <div className="flex items-center gap-3 mb-8">
                   <div className="h-10 w-10 overflow-hidden rounded-lg bg-red-600 p-1.5 text-white">
-                    <img src={logoHino} alt="Logo Hino Official Jawa Timur - Partner terpercaya untuk penyediaan unit truk Hino baru dan layanan purna jual" className="w-full h-full object-contain" referrerPolicy="no-referrer" />
+                    <img src={logoHino} alt="Logo Hino Official Jawa Timur - Partner terpercaya untuk penyediaan unit truk Hino baru dan layanan purna jual" className="w-full h-full object-contain" width="40" height="40" loading="lazy" referrerPolicy="no-referrer" />
                   </div>
                   <span className="text-xl font-bold tracking-tight text-slate-900 uppercase">Hino <span className="text-red-600">Official</span></span>
                 </div>
