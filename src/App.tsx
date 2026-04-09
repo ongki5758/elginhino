@@ -34,17 +34,17 @@ import {
   Check,
   X
 } from 'lucide-react';
-import logoHino from './assets/logo.webp';
-import heroImage from './assets/hero-image.webp';
-import hino300 from './assets/hino-300-series.webp';
-import hino500 from './assets/hino-500-series.webp';
-import hino700 from './assets/hino-700-series.webp';
-import karoseriHino from './assets/karoseri-hino.webp';
-import serahTerima1 from './assets/serah-terima-1.webp';
-import serahTerima2 from './assets/serah-terima-2.webp';
-import galeri1 from './assets/galeri-truk-1.webp';
-import galeri2 from './assets/galeri-truk-2.webp';
-import galeri3 from './assets/galeri-truk-3.webp';
+const logoHino = '/images/logo.webp';
+const heroImage = '/images/hero-image.webp';
+const hino300 = '/images/hino-300-series.webp';
+const hino500 = '/images/hino-500-series.webp';
+const hino700 = '/images/hino-700-series.webp';
+const karoseriHino = '/images/karoseri-hino.webp';
+const serahTerima1 = '/images/serah-terima-1.webp';
+const serahTerima2 = '/images/serah-terima-2.webp';
+const galeri1 = '/images/galeri-truk-1.webp';
+const galeri2 = '/images/galeri-truk-2.webp';
+const galeri3 = '/images/galeri-truk-3.webp';
 
 declare global {
   interface Window {
