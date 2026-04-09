@@ -34,17 +34,17 @@ import {
   Check,
   X
 } from 'lucide-react';
-const logoHino = '/images/logo.webp';
-const heroImage = '/images/hero-image.webp';
-const hino300 = '/images/hino-300-series.webp';
-const hino500 = '/images/hino-500-series.webp';
-const hino700 = '/images/hino-700-series.webp';
-const karoseriHino = '/images/karoseri-hino.webp';
-const serahTerima1 = '/images/serah-terima-1.webp';
-const serahTerima2 = '/images/serah-terima-2.webp';
-const galeri1 = '/images/galeri-truk-1.webp';
-const galeri2 = '/images/galeri-truk-2.webp';
-const galeri3 = '/images/galeri-truk-3.webp';
+const logoHino = `${import.meta.env.BASE_URL}images/logo.webp`;
+const heroImage = `${import.meta.env.BASE_URL}images/hero-image.webp`;
+const hino300 = `${import.meta.env.BASE_URL}images/hino-300-series.webp`;
+const hino500 = `${import.meta.env.BASE_URL}images/hino-500-series.webp`;
+const hino700 = `${import.meta.env.BASE_URL}images/hino-700-series.webp`;
+const karoseriHino = `${import.meta.env.BASE_URL}images/karoseri-hino.webp`;
+const serahTerima1 = `${import.meta.env.BASE_URL}images/serah-terima-1.webp`;
+const serahTerima2 = `${import.meta.env.BASE_URL}images/serah-terima-2.webp`;
+const galeri1 = `${import.meta.env.BASE_URL}images/galeri-truk-1.webp`;
+const galeri2 = `${import.meta.env.BASE_URL}images/galeri-truk-2.webp`;
+const galeri3 = `${import.meta.env.BASE_URL}images/galeri-truk-3.webp`;
 
 declare global {
   interface Window {
