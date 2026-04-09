@@ -34,17 +34,17 @@ import {
   Check,
   X
 } from 'lucide-react';
-const logoHino = `${import.meta.env.BASE_URL}images/logo.webp`;
-const heroImage = "https://picsum.photos/seed/hino-hero/1920/1080";
-const hino300 = "https://picsum.photos/seed/hino300/800/600";
-const hino500 = "https://picsum.photos/seed/hino500/800/600";
-const hino700 = "https://picsum.photos/seed/hino700/800/600";
-const karoseriHino = "https://picsum.photos/seed/karoseri/800/600";
-const serahTerima1 = "https://picsum.photos/seed/delivery1/800/800";
-const serahTerima2 = "https://picsum.photos/seed/delivery2/800/800";
-const galeri1 = "https://picsum.photos/seed/hino-truck-1/800/800";
-const galeri2 = "https://picsum.photos/seed/hino-truck-2/800/800";
-const galeri3 = "https://picsum.photos/seed/hino-truck-3/800/800";
+const logoHino = "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?q=80&w=200&auto=format&fit=crop";
+const heroImage = "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=1920&auto=format&fit=crop";
+const hino300 = "https://images.unsplash.com/photo-1586191582151-f73872dfd183?q=80&w=800&auto=format&fit=crop";
+const hino500 = "https://images.unsplash.com/photo-1591768793355-74d04bb6608f?q=80&w=800&auto=format&fit=crop";
+const hino700 = "https://images.unsplash.com/photo-1501700489910-fb391653440a?q=80&w=800&auto=format&fit=crop";
+const karoseriHino = "https://images.unsplash.com/photo-1519003722824-194d4455a60c?q=80&w=800&auto=format&fit=crop";
+const serahTerima1 = "https://images.unsplash.com/photo-1580674285054-bed31e145f59?q=80&w=800&auto=format&fit=crop";
+const serahTerima2 = "https://images.unsplash.com/photo-1580674674050-2befe487ff7c?q=80&w=800&auto=format&fit=crop";
+const galeri1 = "https://images.unsplash.com/photo-1591769225440-811ad7d62ca2?q=80&w=800&auto=format&fit=crop";
+const galeri2 = "https://images.unsplash.com/photo-1591768793355-74d04bb6608f?q=80&w=800&auto=format&fit=crop";
+const galeri3 = "https://images.unsplash.com/photo-1586191582151-f73872dfd183?q=80&w=800&auto=format&fit=crop";
 
 declare global {
   interface Window {
