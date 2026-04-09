@@ -34,17 +34,18 @@ import {
   Check,
   X
 } from 'lucide-react';
-const logoHino = "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?q=80&w=200&auto=format&fit=crop";
-const heroImage = "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=1920&auto=format&fit=crop";
-const hino300 = "https://images.unsplash.com/photo-1586191582151-f73872dfd183?q=80&w=800&auto=format&fit=crop";
-const hino500 = "https://images.unsplash.com/photo-1591768793355-74d04bb6608f?q=80&w=800&auto=format&fit=crop";
-const hino700 = "https://images.unsplash.com/photo-1501700489910-fb391653440a?q=80&w=800&auto=format&fit=crop";
-const karoseriHino = "https://images.unsplash.com/photo-1519003722824-194d4455a60c?q=80&w=800&auto=format&fit=crop";
-const serahTerima1 = "https://images.unsplash.com/photo-1580674285054-bed31e145f59?q=80&w=800&auto=format&fit=crop";
-const serahTerima2 = "https://images.unsplash.com/photo-1580674674050-2befe487ff7c?q=80&w=800&auto=format&fit=crop";
-const galeri1 = "https://images.unsplash.com/photo-1591769225440-811ad7d62ca2?q=80&w=800&auto=format&fit=crop";
-const galeri2 = "https://images.unsplash.com/photo-1591768793355-74d04bb6608f?q=80&w=800&auto=format&fit=crop";
-const galeri3 = "https://images.unsplash.com/photo-1586191582151-f73872dfd183?q=80&w=800&auto=format&fit=crop";
+const logoHino = "https://cdn.scalev.id/uploads/1771003213/DoBtLaw_jwSqfy8-CXPFGg/1771003214902-images.webp";
+const heroImage = "https://cdn.scalev.id/uploads/1771001694/8yrmDSmKM1iwIYWyLOX75w/1771001695007-Untitled-design-(4).webp";
+const hino300 = "https://cdn.scalev.id/uploads/1771003281/P2Qo500ZbZQeD9jsC_jzRw/1771003282472-truck-300-series-heading-10-1691049941.webp";
+const hino500 = "https://cdn.scalev.id/uploads/1771003342/Kc_pSeCMT56Bg41P0hybIA/1771003343411-truck-500-series-heading-10-1691049975.webp";
+const hino700 = "https://cdn.scalev.id/uploads/1771003611/qDOl6sCwG1eByIxJo0EtBQ/1771003612505-hino.webp";
+const karoseriHino = "https://cdn.scalev.id/uploads/1771003873/QM85L4N5L3Ocr0JEscFIuQ/1771003873992-images-(1).webp";
+const serahTerima1 = "https://cdn.scalev.id/uploads/1771044334/eXOQUU4HzdLrFxSfX2m-Bg/1771044335134-WhatsApp-Image-2026-02-14-at-11.27.20.webp";
+const serahTerima2 = "https://cdn.scalev.id/uploads/1771044381/evtnqFMKJAo4loJ0JTamqw/1771044381898-WhatsApp-Image-2026-02-14-at-11.27.20-(1).webp";
+const galeri1 = "https://cdn.scalev.id/uploads/1771003984/yBvGluPFdnY2ZEpdR4h8Kg/1771003985431-FM-280-JD-3.webp";
+const galeri2 = "https://cdn.scalev.id/uploads/1771004240/yBUgrI_clgGU56sFICajTQ/1771004241504-Dealer20230315-122717-Dealer-Resmi-Hino-Ranger-FM-280-JD-Ready-Stock.webp";
+const galeri3 = "https://cdn.scalev.id/uploads/1771085995/x9Kor0E_sYJcH__KZbGaPw/1771085996414-WhatsApp-Image-2026-02-14-at-17.35.39-(1).webp";
+const galeri4 = "http://cdn.scalev.id/uploads/1771086021/9GUoFPJfNZzKyg3xe75h0g/1771086023220-WhatsApp-Image-2026-02-14-at-17.35.40.webp";
 
 declare global {
   interface Window {
@@ -618,23 +619,32 @@ export default function App() {
           <div className="max-w-7xl mx-auto">
             <div className="lg:flex lg:gap-32 items-center">
               <div className="lg:w-1/2 order-2 lg:order-1">
-                <div className="grid grid-cols-2 gap-8">
+                <div className="grid grid-cols-3 gap-4">
                   <motion.img 
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     src={karoseriHino} 
                     alt="Karoseri Hino 1" 
-                    className="rounded-3xl shadow-apple aspect-square object-cover" 
+                    className="rounded-2xl shadow-apple aspect-[3/4] object-cover" 
                   />
                   <motion.img 
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ delay: 0.2 }}
+                    transition={{ delay: 0.1 }}
                     src={galeri1} 
                     alt="Karoseri Hino 2" 
-                    className="rounded-3xl shadow-apple aspect-square object-cover mt-12" 
+                    className="rounded-2xl shadow-apple aspect-[3/4] object-cover mt-8" 
+                  />
+                  <motion.img 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.2 }}
+                    src={galeri2} 
+                    alt="Karoseri Hino 3" 
+                    className="rounded-2xl shadow-apple aspect-[3/4] object-cover mt-16" 
                   />
                 </div>
               </div>
@@ -759,13 +769,13 @@ export default function App() {
               <p className="text-slate-500 text-sm">Bukti komitmen kami dalam melayani setiap unit dengan standar dealer resmi.</p>
             </div>
 
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-              {[
-                { src: serahTerima1, label: "Serah Terima Unit" },
-                { src: serahTerima2, label: "Pengecekan Akhir" },
-                { src: galeri2, label: "Unit Ready Stock" },
-                { src: galeri3, label: "Proses Pengiriman" }
-              ].map((img, i) => (
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+                {[
+                  { src: serahTerima1, label: "Serah Terima Unit" },
+                  { src: serahTerima2, label: "Pengecekan Akhir" },
+                  { src: galeri3, label: "Unit Ready Stock" },
+                  { src: galeri4, label: "Proses Pengiriman" }
+                ].map((img, i) => (
                 <div key={i} className="group relative aspect-square rounded-3xl overflow-hidden shadow-apple border border-slate-50">
                   <img src={img.src} alt={img.label} className="w-full h-full object-cover group-hover:scale-105 transition duration-700" referrerPolicy="no-referrer" />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
