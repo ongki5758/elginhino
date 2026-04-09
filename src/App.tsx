@@ -232,7 +232,7 @@ export default function App() {
                 className="flex items-center gap-3"
               >
                 <div className="h-10 w-10 overflow-hidden rounded-lg bg-red-600 p-1.5 shadow-lg shadow-red-200/50">
-                  <img src={logoHino} alt="Hino Logo" className="w-full h-full object-contain" referrerPolicy="no-referrer" />
+                  <img src={logoHino} alt="Logo Dealer Resmi Hino Jawa Timur - Simbol kualitas dan ketangguhan truk Hino Indonesia untuk solusi transportasi bisnis Anda" className="w-full h-full object-contain" width="40" height="40" referrerPolicy="no-referrer" />
                 </div>
                 <div className="flex flex-col">
                   <motion.div 
@@ -345,7 +345,7 @@ export default function App() {
                 className="relative"
               >
                 <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-premium border border-slate-100">
-                  <img src={heroImage} alt="Hino Truck Official" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                  <img src={heroImage} alt="Elgin MD sebagai Sales Consultant Dealer Resmi Hino Jawa Timur siap melayani konsultasi unit truk baru Anda" className="w-full h-full object-cover" width="800" height="600" fetchPriority="high" referrerPolicy="no-referrer" />
                 </div>
                 <motion.div 
                   initial={{ opacity: 0, y: 20 }}
@@ -363,7 +363,7 @@ export default function App() {
 
           {/* Mobile Hero (Locked 9:16) */}
           <div className="md:hidden relative aspect-[9/16] w-full overflow-hidden">
-            <img src={heroImage} alt="Hino Truck Mobile" className="absolute inset-0 w-full h-full object-cover" referrerPolicy="no-referrer" />
+            <img src={heroImage} alt="Truk Hino tangguh sebagai partner bisnis terpercaya untuk efisiensi operasional logistik dan konstruksi" className="absolute inset-0 w-full h-full object-cover" width="400" height="711" fetchPriority="high" referrerPolicy="no-referrer" />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
             <div className="absolute bottom-0 left-0 right-0 p-8 pb-20">
               <motion.div 
@@ -514,7 +514,7 @@ export default function App() {
                   className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-premium transition-all duration-500"
                 >
                   <div className="aspect-video overflow-hidden bg-slate-50">
-                    <img src={unit.img} alt={unit.name} className="w-full h-full object-cover group-hover:scale-105 transition duration-700" referrerPolicy="no-referrer" />
+                    <img src={unit.img} alt={`Truk ${unit.name} ${unit.sub} - Solusi kendaraan niaga tangguh untuk bisnis Anda di Jawa Timur`} className="w-full h-full object-cover group-hover:scale-105 transition duration-700" width="400" height="225" loading="lazy" referrerPolicy="no-referrer" />
                   </div>
                   <div className="p-6 sm:p-8">
                     <p className="text-[9px] sm:text-[10px] font-bold text-red-600 uppercase tracking-widest mb-2">{unit.sub}</p>
@@ -574,7 +574,7 @@ export default function App() {
               </div>
               <div className="lg:w-1/2 mt-16 lg:mt-0">
                 <div className="relative rounded-3xl overflow-hidden shadow-premium aspect-square">
-                  <img src="https://cdn.scalev.id/uploads/1771003873/QM85L4N5L3Ocr0JEscFIuQ/1771003873992-images-(1).webp" alt="Hino Business Solution" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                  <img src="https://cdn.scalev.id/uploads/1771003873/QM85L4N5L3Ocr0JEscFIuQ/1771003873992-images-(1).webp" alt="Solusi transportasi bisnis Hino dengan berbagai pilihan karoseri untuk logistik, konstruksi, and hauling" className="w-full h-full object-cover" width="600" height="600" loading="lazy" referrerPolicy="no-referrer" />
                   <div className="absolute inset-0 bg-slate-900/5"></div>
                 </div>
               </div>
@@ -625,8 +625,9 @@ export default function App() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     src={karoseriHino} 
-                    alt="Karoseri Hino 1" 
+                    alt="Dukungan karoseri terpadu untuk unit Hino dengan kualitas pengerjaan standar dealer resmi" 
                     className="rounded-2xl shadow-apple aspect-[3/4] object-cover" 
+                    width="300" height="400" loading="lazy"
                   />
                   <motion.img 
                     initial={{ opacity: 0, y: 20 }}
@@ -634,8 +635,9 @@ export default function App() {
                     viewport={{ once: true }}
                     transition={{ delay: 0.1 }}
                     src={galeri1} 
-                    alt="Karoseri Hino 2" 
+                    alt="Proses pembuatan karoseri truk Hino yang presisi untuk memastikan durabilitas di medan berat" 
                     className="rounded-2xl shadow-apple aspect-[3/4] object-cover mt-8" 
+                    width="300" height="400" loading="lazy"
                   />
                   <motion.img 
                     initial={{ opacity: 0, y: 20 }}
@@ -643,8 +645,9 @@ export default function App() {
                     viewport={{ once: true }}
                     transition={{ delay: 0.2 }}
                     src={galeri2} 
-                    alt="Karoseri Hino 3" 
+                    alt="Unit Hino dengan karoseri khusus yang siap mendukung operasional bisnis di seluruh wilayah Jawa Timur" 
                     className="rounded-2xl shadow-apple aspect-[3/4] object-cover mt-16" 
+                    width="300" height="400" loading="lazy"
                   />
                 </div>
               </div>
@@ -771,13 +774,13 @@ export default function App() {
 
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
                 {[
-                  { src: serahTerima1, label: "Serah Terima Unit" },
-                  { src: serahTerima2, label: "Pengecekan Akhir" },
-                  { src: galeri3, label: "Unit Ready Stock" },
-                  { src: galeri4, label: "Proses Pengiriman" }
+                  { src: serahTerima1, label: "Dokumentasi serah terima unit truk Hino baru kepada konsumen setia Dealer Hino Jawa Timur" },
+                  { src: serahTerima2, label: "Pengecekan akhir unit Hino sebelum dikirimkan untuk memastikan standar kualitas dealer resmi terpenuhi" },
+                  { src: galeri3, label: "Stok unit truk Hino ready stock di dealer resmi Hino Kletek Sidoarjo siap untuk dipesan" },
+                  { src: galeri4, label: "Proses pengiriman unit truk Hino ke lokasi konsumen dengan pendampingan profesional dari sales consultant" }
                 ].map((img, i) => (
                 <div key={i} className="group relative aspect-square rounded-3xl overflow-hidden shadow-apple border border-slate-50">
-                  <img src={img.src} alt={img.label} className="w-full h-full object-cover group-hover:scale-105 transition duration-700" referrerPolicy="no-referrer" />
+                  <img src={img.src} alt={img.label} className="w-full h-full object-cover group-hover:scale-105 transition duration-700" width="300" height="300" loading="lazy" referrerPolicy="no-referrer" />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   <p className="absolute bottom-6 left-6 text-white text-[9px] font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-500">{img.label}</p>
                 </div>
@@ -972,7 +975,7 @@ export default function App() {
                   </div>
                   <div className="relative z-10">
                     <div className="flex items-center gap-6 mb-12">
-                      <img src={heroImage} alt="Elgin MD" className="w-20 h-20 rounded-2xl object-cover border-2 border-white/10" referrerPolicy="no-referrer" />
+                      <img src={heroImage} alt="Elgin MD sebagai Senior Sales Consultant Hino Jawa Timur yang berpengalaman melayani kebutuhan armada bisnis" className="w-20 h-20 rounded-2xl object-cover border-2 border-white/10" width="80" height="80" loading="lazy" referrerPolicy="no-referrer" />
                       <div>
                         <p className="text-xl font-bold tracking-tight">Elgin MD</p>
                         <p className="text-xs text-red-500 font-bold uppercase tracking-widest mt-1">Senior Sales Consultant</p>
@@ -996,7 +999,7 @@ export default function App() {
               <div className="lg:col-span-2">
                 <div className="flex items-center gap-3 mb-8">
                   <div className="h-10 w-10 overflow-hidden rounded-lg bg-red-600 p-1.5 text-white">
-                    <img src={logoHino} alt="Hino Logo" className="w-full h-full object-contain" referrerPolicy="no-referrer" />
+                    <img src={logoHino} alt="Logo Hino Official Jawa Timur - Partner terpercaya untuk penyediaan unit truk Hino baru dan layanan purna jual" className="w-full h-full object-contain" referrerPolicy="no-referrer" />
                   </div>
                   <span className="text-xl font-bold tracking-tight text-slate-900 uppercase">Hino <span className="text-red-600">Official</span></span>
                 </div>
